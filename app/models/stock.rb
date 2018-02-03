@@ -1,6 +1,9 @@
 class Stock < ApplicationRecord
 
   def self.new_from_lookup(ticker_symbol)
+    has_many :user_stocks
+    has_many :users, through: :user_stocks
+
     look_up_stock = StockQuote::Stock.quote(ticker_symbol)
     price = strip_commas(look_up_stock.l)
     new(name: look_up_stock.name, ticker: look_up_stock.symbol, last_price: price)
