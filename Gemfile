@@ -16,7 +16,7 @@ gem 'rails', '~> 5.1.4'
 
 # Add this if you're using rbenv
 #gem 'capistrano-rbenv', '~> 2.1'
-
+gem 'font-awesome-rails'
 # Add this if you're using rvm
 # gem 'capistrano-rvm'
 
@@ -69,7 +69,7 @@ end
 group :production do
   ruby '2.5.0'
   #gem 'pg'
-  gem 'pg','~>0.11'
+  gem 'pg', '~>0.11'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
