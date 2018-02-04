@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :friendships
   get 'search_friends', to: 'users#search'
   get 'my_friends', to: 'users#my_friends'
+  post 'add_friend', to: 'users#add_friend'
 
 end
