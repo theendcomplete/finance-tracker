@@ -1,4 +1,4 @@
-<%= render 'friends/lookup %>
+<%= render 'friends/lookup' %>
 <% if @friendships.size > 0 %>
   <table class="table table-striped">
     <thead>
@@ -24,7 +24,7 @@
         </td>
         <td>
           <%= link_to 'View Profile', user_path(friend), class: 'btn btn-primary btn-xs' %>
-          <%= link_to 'Remove friend', frindship_path(friend), method: :delete,
+          <%= link_to 'Remove friend', friendship_path(friend), method: :delete,
                       data: {confirm: 'Are you sure??'}, class: 'btn btn-xs btn-danger' %>
         </td>
       </tr>
@@ -36,3 +36,4 @@
     <p class="lead"> You don't have any friends.</p>
   </div>
 <% end %>
+
